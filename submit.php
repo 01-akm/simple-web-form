@@ -10,3 +10,10 @@ $dbname = "form_db";       // The name of the database we created
 // Create a new MySQLi connection.
 // The '@' symbol suppresses default PHP errors, allowing us to handle them manually.
 $conn = @new mysqli($servername, $username, $password, $dbname);
+
+// Check if the connection failed.
+if ($conn->connect_error) {
+    // If it fails, stop the script and display a detailed error message.
+    // This is crucial for debugging during development.
+    die("Connection failed: " . $conn->connect_error);
+}
