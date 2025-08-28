@@ -48,3 +48,22 @@ label {
     margin-bottom: 8px; /* Space between the label and the input field */
     color: #34495e;
 }
+/* --- General Input, Textarea, and Select Styling --- */
+/* A consistent style for all text-based input fields. */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+textarea,
+select {
+    width: 100%; /* Makes the input fields take up the full width of their container */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Slightly rounded corners for the inputs */
+    box-sizing: border-box; /* Important for consistent sizing */
+    font-size: 16px;
+    color: #555;
+    transition: border-color 0.3s; /* Smooth transition for the focus effect */
+}
