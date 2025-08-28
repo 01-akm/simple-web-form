@@ -62,3 +62,54 @@
         .table-responsive {
             overflow-x: auto; /* Adds a horizontal scrollbar on small screens */
         }
+      /* --- Link/Button Styling --- */
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-link:hover {
+            background-color: #34495e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>All Form Submissions</h1>
+
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <!-- Define all the table headers -->
+                        <th>ID</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Search Query</th>
+                        <th>Website</th>
+                        <th>Phone</th>
+                        <th>Color</th>
+                        <th>DOB</th>
+                        <th>Appointment</th>
+                        <th>Time</th>
+                        <th>Month</th>
+                        <th>Week</th>
+                        <th>Age</th>
+                        <th>Satisfaction</th>
+                        <th>Interests</th>
+                        <th>Gender</th>
+                        <th>Country</th>
+                        <th>Browser</th>
+                        <th>Document</th>
+                        <th>User ID</th>
+                        <th>Bio</th>
+                        <th>Submitted At</th>
+                    </tr>
+                </thead>
+                <tbody>
