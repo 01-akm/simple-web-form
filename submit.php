@@ -128,3 +128,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $userId,
         $bio
     );
+
+       // --- 8. EXECUTE AND PROVIDE FEEDBACK ---
+    // Execute the prepared statement.
+    if ($stmt->execute()) {
+        // If successful, show a success message.
+        echo "<h1>Success!</h1>";
+        echo "<p>Your information has been submitted successfully.</p>";
+        echo "<a href='display.php'>View All Submissions</a>";
+    } else {
+        // If it fails, show an error message.
+        echo "<h1>Error!</h1>";
+        echo "<p>There was a problem with your submission: " . htmlspecialchars($stmt->error) . "</p>";
+    }
