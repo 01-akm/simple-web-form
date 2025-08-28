@@ -144,3 +144,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  // --- 9. CLOSE STATEMENT ---
     $stmt->close();
 }
+
+// --- 10. CLOSE CONNECTION ---
+$conn->close();
+
+?>
