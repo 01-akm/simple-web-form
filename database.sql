@@ -52,3 +52,7 @@ CREATE TABLE `users` (
 
  -- `submission_date`: A timestamp that automatically records when the entry was created.
     `submission_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+-- Set the `id` column as the primary key.
+    -- A primary key is a unique identifier for each record in the table.
+    PRIMARY KEY (`id`)
+);
