@@ -113,3 +113,19 @@
                     </tr>
                 </thead>
                 <tbody>
+                     <?php
+                    // --- 1. DATABASE CONNECTION ---
+                    // Use the same credentials as in submit.php
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "form_db";
+
+                    $conn = new mysqli($servername, $username, $password, $dbname);
+
+                    // Check connection
+                    if ($conn->connect_error) {
+                        // Use a table row to display the error to maintain table structure
+                        echo "<tr><td colspan='22'>Connection failed: " . $conn->connect_error . "</td></tr>";
+                    } else {
+                        
