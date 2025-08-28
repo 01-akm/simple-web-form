@@ -68,3 +68,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // password_hash() creates a strong, secure hash of the password.
     $password_hashed = password_hash($password_plain, PASSWORD_DEFAULT);
 
+
+    // --- 5. FILE UPLOAD HANDLING ---
+    $document_path = NULL; // Default to NULL
+    // Check if a file was actually uploaded and there are no errors.
+    if (isset($_FILES['documents']) && $_FILES['documents']['error'][0] == UPLOAD_ERR_OK) {
+        $upload_dir = 'uploads/'; // Create a folder named 'uploads' in the same directory.
+        // Create the directory if it doesn't exist.
+        if (!is_dir($upload_dir)) {
+            mkdir($upload_dir, 0755, true);
+        }
+        // Get the original filename.
+        $filename = basename($_FILES['documents']['name'][0]);
+        // Define the full path for the file to be saved.
+        $document_path = $upload_dir . $filename;
+
+        // Move the temporary uploaded file to our 'uploads' directory.
+        if (!move_uploaded_file($_FILES['documents']['tmp_name'][0], $document_path)) {
+            $document_path = NULL; // If move fails, reset path to NULL.
+        }
+    }
