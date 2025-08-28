@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     <!-- Link to the CSS file for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-     <!-- Main container for the form to center it on the page -->
+    <!-- Main container for the form to center it on the page -->
     <div class="form-container">
- <!-- The <form> tag defines the start of the form.
+        <!-- The <form> tag defines the start of the form.
              'action' specifies the file where the form data will be sent ('submit.php').
              'method' is set to 'post', which is the standard way to send form data.
              'enctype' is needed for file uploads. -->
@@ -29,7 +31,7 @@
                 <label for="fullName">Full Name (text):</label>
                 <input type="text" id="fullName" name="fullName" placeholder="General text input" required>
             </div>
-             <!-- 2. Email Input (with multiple attribute) -->
+            <!-- 2. Email Input (with multiple attribute) -->
             <div id="email-input-group" class="form-group">
                 <label for="email">Email Address (email):</label>
                 <input type="email" id="email" name="email" placeholder="yourname@example.com" multiple required>
@@ -39,12 +41,12 @@
                 <label for="password">Password (password):</label>
                 <input type="password" id="password" name="password" placeholder="Choose a strong password" required>
             </div>
-             <!-- 4. Search Input -->
+            <!-- 4. Search Input -->
             <div id="search-input-group" class="form-group">
                 <label for="searchQuery">Search (search):</label>
                 <input type="search" id="searchQuery" name="searchQuery" placeholder="Search for articles...">
             </div>
-             <!-- 5. URL Input -->
+            <!-- 5. URL Input -->
             <div id="url-input-group" class="form-group">
                 <label for="website">Website (url):</label>
                 <input type="url" id="website" name="website" placeholder="https://example.com">
@@ -69,7 +71,7 @@
                 <label for="dob">Date of Birth (date):</label>
                 <input type="date" id="dob" name="dob">
             </div>
-             <!-- 9. DateTime-Local Input -->
+            <!-- 9. DateTime-Local Input -->
             <div id="datetime-local-input-group" class="form-group">
                 <label for="appointment">Appointment (datetime-local):</label>
                 <input type="datetime-local" id="appointment" name="appointment">
@@ -79,26 +81,26 @@
                 <label for="meetingTime">Meeting Time (time):</label>
                 <input type="time" id="meetingTime" name="meetingTime">
             </div>
-             <!-- 11. Month Input -->
+            <!-- 11. Month Input -->
             <div id="month-input-group" class="form-group">
                 <label for="startMonth">Start Month (month):</label>
                 <input type="month" id="startMonth" name="startMonth">
             </div>
-             <!-- 12. Week Input -->
+            <!-- 12. Week Input -->
             <div id="week-input-group" class="form-group">
                 <label for="projectWeek">Project Week (week):</label>
                 <input type="week" id="projectWeek" name="projectWeek">
             </div>
-             <hr>
+            <hr>
             <h2>Numeric Inputs</h2>
             <hr>
-            
+
             <!-- 13. Number Input -->
             <div id="number-input-group" class="form-group">
                 <label for="age">Age (number):</label>
                 <input type="number" id="age" name="age" min="18" max="100" placeholder="e.g., 25">
             </div>
-             <!-- 14. Range Slider -->
+            <!-- 14. Range Slider -->
             <div id="range-input-group" class="form-group">
                 <label for="satisfaction">Satisfaction Level (range):</label>
                 <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" step="1">
@@ -119,7 +121,7 @@
                     <label for="sports">Sports</label>
                 </div>
             </div>
-             <!-- 16. Radio Buttons (for selecting one option) -->
+            <!-- 16. Radio Buttons (for selecting one option) -->
             <div id="radio-button-group" class="form-group">
                 <label>Gender (radio):</label>
                 <div class="radio-options">
@@ -131,7 +133,7 @@
                     <label for="other">Other</label>
                 </div>
             </div>
-            
+
             <!-- 17. Select Dropdown -->
             <div id="select-input-group" class="form-group">
                 <label for="country">Country (select):</label>
@@ -142,7 +144,7 @@
                     <option value="uk">United Kingdom</option>
                 </select>
             </div>
-  <!-- 18. Datalist -->
+            <!-- 18. Datalist -->
             <div id="datalist-input-group" class="form-group">
                 <label for="browser">Browser (datalist):</label>
                 <input list="browsers" id="browser" name="browser" placeholder="Start typing...">
@@ -157,16 +159,16 @@
             <hr>
             <h2>File and Media</h2>
             <hr>
-            
+
             <!-- 19. File Input (with multiple attribute) -->
             <div id="file-input-group" class="form-group">
                 <label for="documents">Upload Documents (file):</label>
                 <input type="file" id="documents" name="documents[]" accept=".pdf,.doc,.docx" multiple>
             </div>
-              <hr>
+            <hr>
             <h2>Hidden / Special Inputs</h2>
             <hr>
-            
+
             <!-- 20. Hidden Input (not visible to user) -->
             <input type="hidden" id="userId" name="userId" value="12345AhgfjhfBC">
             <!-- 21. Textarea for longer text -->
@@ -174,15 +176,15 @@
                 <label for="bio">Biography (textarea):</label>
                 <textarea id="bio" name="bio" rows="4" placeholder="Tell us something about yourself..."></textarea>
             </div>
-             <hr>
+            <hr>
             <h2>Button Inputs</h2>
             <hr>
-            
+
             <!-- 22. Submit Button (styled with <button> tag) -->
             <div id="submit-button-group" class="form-group">
                 <button type="submit">Register (submit)</button>
             </div>
-             <!-- 23. Reset Button -->
+            <!-- 23. Reset Button -->
             <div id="reset-button-group" class="form-group">
                 <input type="reset" value="Clear Form (reset)">
             </div>
@@ -190,14 +192,15 @@
             <div id="button-group" class="form-group">
                 <input type="button" value="Generic Button (button)" onclick="alert('Button clicked!')">
             </div>
- <!-- 25. Image Button -->
+            <!-- 25. Image Button -->
             <div id="image-button-group" class="form-group">
-                 <label>Image Button (image):</label>
-                 <input type="image" src="https://placehold.co/100x40/3498db/ffffff?text=Submit" alt="Submit">
+                <label>Image Button (image):</label>
+                <input type="image" src="https://placehold.co/100x40/3498db/ffffff?text=Submit" alt="Submit">
             </div>
 
         </form>
     </div>
 
 </body>
+
 </html>
