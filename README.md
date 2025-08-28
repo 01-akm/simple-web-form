@@ -1,0 +1,2 @@
+# simple-web-form
+roject Description: Comprehensive PHP Web Form This project is a complete, full-stack web application that demonstrates how to build a dynamic web form from front-end to back-end. It serves as an excellent template for creating data-driven websites. The system allows users to fill out a detailed form, have their data securely processed and stored, and then view all the submissions on a separate page.
