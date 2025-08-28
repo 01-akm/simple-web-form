@@ -88,3 +88,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $document_path = NULL; // If move fails, reset path to NULL.
         }
     }
+// --- 6. SQL PREPARED STATEMENT ---
+    // Using prepared statements is the best way to prevent SQL injection attacks.
+    // The SQL query lists all the columns we want to insert data into.
+    // The 'VALUES' clause uses question marks (?) as placeholders for the data.
+    $sql = "INSERT INTO users (fullName, email, password, searchQuery, website, phone, favColor, dob, appointment, meetingTime, startMonth, projectWeek, age, satisfaction, interests, gender, country, browser, documents, userId, bio) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    // Prepare the SQL statement for execution.
+    $stmt = $conn->prepare($sql);
+
+    if ($stmt === false) {
+        die("Error preparing statement: " . $conn->error);
+    }
