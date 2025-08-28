@@ -35,3 +35,8 @@ p {
     color: #7f8c8d;
     margin-bottom: 30px;
 }
+/* --- Form Group --- */
+/* This is the div that wraps each label and input field. */
+.form-group {
+    margin-bottom: 20px; /* Adds space between each form field */
+}
