@@ -40,3 +40,11 @@ p {
 .form-group {
     margin-bottom: 20px; /* Adds space between each form field */
 }
+/* --- Labels --- */
+/* Styles for the text descriptions of each input field. */
+label {
+    display: block; /* Makes the label take up its own line */
+    font-weight: 600;
+    margin-bottom: 8px; /* Space between the label and the input field */
+    color: #34495e;
+}
