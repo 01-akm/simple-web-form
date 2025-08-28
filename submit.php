@@ -22,3 +22,15 @@ if ($conn->connect_error) {
 // Check if the server request method is 'POST'.
 // This ensures that the code inside this block only runs when the form has been submitted.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+ // --- 3. RETRIEVE AND SANITIZE FORM DATA ---
+    // It's good practice to retrieve all expected POST variables.
+    // We use the null coalescing operator '??' to provide a default empty string ''
+    // if a field was not filled out. This prevents errors.
+
+    // Common Text-Based Inputs
+    $fullName = $_POST['fullName'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $password_plain = $_POST['password'] ?? ''; // We get the plain text password first.
+    $searchQuery = $_POST['searchQuery'] ?? '';
+    $website = $_POST['website'] ?? '';
+    
