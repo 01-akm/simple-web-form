@@ -46,3 +46,6 @@ CREATE TABLE `users` (
 
  -- File and Media
     `documents` VARCHAR(255) DEFAULT NULL, -- We'll store the file path, not the file itself.
+ -- Hidden / Special Inputs
+    `userId` VARCHAR(255) DEFAULT NULL,
+    `bio` TEXT DEFAULT NULL, -- TEXT is used for longer strings of text.
