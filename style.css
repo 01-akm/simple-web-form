@@ -75,3 +75,7 @@ select:focus {
     outline: none; /* Removes the default browser outline */
     border-color: #3498db; /* Changes the border color to blue */
 }
+/* --- Textarea Specifics --- */
+textarea {
+    resize: vertical; /* Allows the user to resize the textarea vertically */
+}
