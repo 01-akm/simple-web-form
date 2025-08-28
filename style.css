@@ -11,3 +11,14 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+/* --- Form Container --- */
+/* This styles the main box that holds the form. */
+.form-container {
+    background-color: #ffffff; /* White background for the form */
+    padding: 30px 40px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a "floating" effect */
+    width: 100%;
+    max-width: 600px; /* Prevents the form from getting too wide on large screens */
+    box-sizing: border-box; /* Ensures padding doesn't affect the final width */
+}
