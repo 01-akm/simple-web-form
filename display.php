@@ -170,3 +170,16 @@
                             // If no records are found, display a message in a single row.
                             echo "<tr><td colspan='22'>No results found</td></tr>";
                         }
+                         // --- 4. CLOSE CONNECTION ---
+                        $conn->close();
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+
+        <a href="index.html" class="back-link">Back to Form</a>
+    </div>
+
+</body>
+</html>
