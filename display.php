@@ -132,3 +132,41 @@
                         // Select all columns from the 'users' table.
                         $sql = "SELECT id, fullName, email, searchQuery, website, phone, favColor, dob, appointment, meetingTime, startMonth, projectWeek, age, satisfaction, interests, gender, country, browser, documents, userId, bio, submission_date FROM users";
                         $result = $conn->query($sql);
+ // --- 3. DISPLAY DATA IN TABLE ROWS ---
+                        // Check if the query returned any rows.
+                        if ($result->num_rows > 0) {
+                            // Loop through each row of the result set.
+                            while($row = $result->fetch_assoc()) {
+                                // Start a new table row
+                                echo "<tr>";
+                                // Output each column's data into a table cell (<td>).
+                                // htmlspecialchars() is used to prevent XSS attacks by escaping HTML characters.
+                                echo "<td>" . htmlspecialchars($row["id"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["fullName"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["email"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["searchQuery"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["website"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["phone"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["favColor"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["dob"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["appointment"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["meetingTime"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["startMonth"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["projectWeek"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["age"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["satisfaction"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["interests"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["gender"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["country"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["browser"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["documents"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["userId"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["bio"]) . "</td>";
+                                echo "<td>" . htmlspecialchars($row["submission_date"]) . "</td>";
+                                // End the table row
+                                echo "</tr>";
+                            }
+                        } else {
+                            // If no records are found, display a message in a single row.
+                            echo "<tr><td colspan='22'>No results found</td></tr>";
+                        }
