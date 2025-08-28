@@ -141,3 +141,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<h1>Error!</h1>";
         echo "<p>There was a problem with your submission: " . htmlspecialchars($stmt->error) . "</p>";
     }
+ // --- 9. CLOSE STATEMENT ---
+    $stmt->close();
+}
