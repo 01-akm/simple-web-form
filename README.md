@@ -57,7 +57,7 @@ $username = "root";
 $password = ""; // <-- Change this if you have a password
 $dbname = "form_db";
 
-You're Ready! Open your web browser and navigate to http://localhost/simple-web-form/index.php. You should now see the form and be able to use the application. 
+You're Ready! Open your web browser and navigate to http://localhost/simple-web-form/index.php. You should now see the form and be able to use the application.
 
 Challenges & Solutions
 During the development of this project, we encountered a common usability challenge:
