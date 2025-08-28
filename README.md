@@ -3,59 +3,60 @@ Comprehensive PHP & MySQL Web Form
 This project is a complete, full-stack web application that demonstrates how to build a dynamic and secure web form. It serves as a robust template for creating data-driven websites, featuring a comprehensive front-end form, a secure PHP back-end for processing, and a MySQL database for storage.
 
 Features
-Comprehensive HTML5 Form: Includes a wide variety of input fields, from text and email to date/time pickers, color selectors, and file uploads.
+* Comprehensive HTML5 Form: Includes a wide variety of input fields, from text and email to date/time pickers, color selectors, and file uploads.
 
-Clean, Modern Design: Styled with CSS for a professional and responsive user interface that looks great on any device.
+* Clean, Modern Design: Styled with CSS for a professional and responsive user interface that looks great on any device.
 
-Secure Back-End Processing: The PHP back-end uses prepared statements to prevent SQL injection attacks and securely hashes user passwords.
+* Secure Back-End Processing: The PHP back-end uses prepared statements to prevent SQL injection attacks and securely hashes user passwords.
 
-Data Sanitization: Implements server-side sanitization, such as cleaning phone number inputs for consistent data storage.
+* Data Sanitization: Implements server-side sanitization, such as cleaning phone number inputs for consistent data storage.
 
-File Upload Handling: Includes a script to manage and store uploaded files in a designated server directory.
+* File Upload Handling: Includes a script to manage and store uploaded files in a designated server directory.
 
-Modular Code: Each form field is self-contained in its own <div>, making it incredibly easy to copy and reuse individual parts in other projects.
+* Modular Code: Each form field is self-contained in its own ```<div>```, making it incredibly easy to copy and reuse individual parts in other projects.
 
-Data Display: A separate page fetches and displays all submitted records from the database in a clean, readable table.
+* Data Display: A separate page fetches and displays all submitted records from the database in a clean, readable table.
 
-Getting Started
+# Getting Started
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-Prerequisites
+# Prerequisites
 You will need a local server environment that supports PHP and MySQL. The most common options are:
 
-XAMPP (for Windows, macOS, and Linux)
+* XAMPP (for Windows, macOS, and Linux)
 
-WAMP (for Windows)
+* WAMP (for Windows)
 
-MAMP (for macOS)
+* MAMP (for macOS)
 
-Installation
-Download the Project: Download all the project files (index.php, style.css, submit.php, display.php, and database.sql) and place them into a single folder (e.g., simple-web-form).
+# Installation
+1. Download the Project: Download all the project files (```index.php``` , ```style.css```, ```submit.php```, ```display.php```, and ```database.sql```) and place them into a single folder (e.g., ```simple-web-form```).
 
-Move to Server Directory: Move this project folder into your local server's root directory. This is typically named htdocs in XAMPP or www in WAMP/MAMP.
+2. Move to Server Directory: Move this project folder into your local server's root directory. This is typically named ```htdocs``` in ```XAMPP``` or ```www``` in ```WAMP/MAMP```.
 
-Create the Database:
+3. Create the Database:
+    * Start your local server's Apache and MySQL services.
 
-Start your local server's Apache and MySQL services.
+    * Open your web browser and navigate to http://localhost/phpmyadmin.
 
-Open your web browser and navigate to http://localhost/phpmyadmin.
+    * Click on the "Import" tab.
 
-Click on the "Import" tab.
+    * Click "Choose File" and select the database.sql file from the project folder.
 
-Click "Choose File" and select the database.sql file from the project folder.
+    * Click "Go" at the bottom of the page. This will create the form_db database and the users table automatically.
 
-Click "Go" at the bottom of the page. This will create the form_db database and the users table automatically.
+4. Configure Database Connection:
 
-Configure Database Connection:
+    * Open both submit.php and display.php in a code editor.
 
-Open both submit.php and display.php in a code editor.
+    * At the top of each file, update the database credentials to match your local server's setup. For most default   XAMPP/WAMP installations, you only need to set the password (which is often blank).
 
-At the top of each file, update the database credentials to match your local server's setup. For most default XAMPP/WAMP installations, you only need to set the password (which is often blank).
-
+```php
 $servername = "localhost";
 $username = "root";
 $password = ""; // <-- Change this if you have a password
 $dbname = "form_db";
+```
 
 You're Ready! Open your web browser and navigate to http://localhost/simple-web-form/index.php. You should now see the form and be able to use the application.
 
