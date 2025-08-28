@@ -22,3 +22,16 @@ body {
     max-width: 600px; /* Prevents the form from getting too wide on large screens */
     box-sizing: border-box; /* Ensures padding doesn't affect the final width */
 }
+/* --- Form Headings and Text --- */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
