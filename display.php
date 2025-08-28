@@ -28,3 +28,34 @@
             text-align: center;
             margin-bottom: 30px;
         }
+/* --- Table Styling --- */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse; /* Removes space between table cell borders */
+            margin-bottom: 20px;
+        }
+
+        .data-table th, .data-table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+            word-wrap: break-word; /* Allows long text to wrap */
+        }
+
+        .data-table th {
+            background-color: #3498db;
+            color: white;
+            font-weight: 600;
+        }
+   .data-table tbody tr:nth-child(even) {
+            background-color: #f2f2f2; /* Adds a zebra-stripe effect to rows */
+        }
+
+        .data-table tbody tr:hover {
+            background-color: #e8f4fd; /* Highlight row on hover */
+        }
+        
+        /* --- Responsive Wrapper for the Table --- */
+        .table-responsive {
+            overflow-x: auto; /* Adds a horizontal scrollbar on small screens */
+        }
