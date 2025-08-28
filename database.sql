@@ -49,3 +49,6 @@ CREATE TABLE `users` (
  -- Hidden / Special Inputs
     `userId` VARCHAR(255) DEFAULT NULL,
     `bio` TEXT DEFAULT NULL, -- TEXT is used for longer strings of text.
+
+ -- `submission_date`: A timestamp that automatically records when the entry was created.
+    `submission_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
