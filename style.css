@@ -67,3 +67,11 @@ select {
     color: #555;
     transition: border-color 0.3s; /* Smooth transition for the focus effect */
 }
+/* --- Focus Style --- */
+/* Highlights the input field when the user clicks on it. */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none; /* Removes the default browser outline */
+    border-color: #3498db; /* Changes the border color to blue */
+}
