@@ -100,3 +100,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt === false) {
         die("Error preparing statement: " . $conn->error);
     }
+  // --- 7. BIND PARAMETERS ---
+    // This step binds the PHP variables to the placeholders (?) in the SQL query.
+    // The string "sssssssssssiissssssss" defines the data type for each parameter:
+    // s = string, i = integer, d = double, b = blob
+    $stmt->bind_param(
+        "sssssssssssiissssssss",
+        $fullName,
+        $email,
+        $password_hashed,
+        $searchQuery,
+        $website,
+        $phone, // The newly sanitized phone number is used here.
+        $favColor,
+        $dob,
+        $appointment,
+        $meetingTime,
+        $startMonth,
+        $projectWeek,
+        $age,
+        $satisfaction,
+        $interests,
+        $gender,
+        $country,
+        $browser,
+        $document_path,
+        $userId,
+        $bio
+    );
