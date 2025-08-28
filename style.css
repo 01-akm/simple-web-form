@@ -111,3 +111,8 @@ button[type="submit"] {
     cursor: pointer; /* Changes the cursor to a pointer on hover */
     transition: background-color 0.3s; /* Smooth transition for the hover effect */
 }
+/* --- Button Hover Effect --- */
+/* Darkens the button slightly when the user hovers over it. */
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
