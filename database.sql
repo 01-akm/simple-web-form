@@ -43,3 +43,6 @@ CREATE TABLE `users` (
     `gender` VARCHAR(50) DEFAULT NULL,
     `country` VARCHAR(100) DEFAULT NULL,
     `browser` VARCHAR(100) DEFAULT NULL,
+
+ -- File and Media
+    `documents` VARCHAR(255) DEFAULT NULL, -- We'll store the file path, not the file itself.
