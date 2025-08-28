@@ -40,3 +40,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = preg_replace('/[^0-9]/', '', $phone_raw);
 
     $favColor = $_POST['favColor'] ?? '';
+// Date and Time Inputs
+    $dob = $_POST['dob'] ?? NULL; // Default to NULL for empty dates
+    $appointment = $_POST['appointment'] ?? NULL;
+    $meetingTime = $_POST['meetingTime'] ?? NULL;
+    $startMonth = $_POST['startMonth'] ?? '';
+    $projectWeek = $_POST['projectWeek'] ?? '';
+
+    // Numeric Inputs
+    $age = $_POST['age'] ?? NULL;
+    $satisfaction = $_POST['satisfaction'] ?? NULL;
+
+    // Choice Inputs
+    // For checkboxes ('interests'), the data comes as an array. We need to convert it to a string.
+    $interests_array = $_POST['interests'] ?? [];
+    $interests = implode(", ", $interests_array); // Joins array elements with a comma and space.
+
+    $gender = $_POST['gender'] ?? '';
+    $country = $_POST['country'] ?? '';
+    $browser = $_POST['browser'] ?? '';
+
+    // Hidden / Special Inputs
+    $userId = $_POST['userId'] ?? '';
+    $bio = $_POST['bio'] ?? '';
