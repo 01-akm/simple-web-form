@@ -128,4 +128,7 @@
                         // Use a table row to display the error to maintain table structure
                         echo "<tr><td colspan='22'>Connection failed: " . $conn->connect_error . "</td></tr>";
                     } else {
-                        
+                        // --- 2. SQL QUERY TO FETCH DATA ---
+                        // Select all columns from the 'users' table.
+                        $sql = "SELECT id, fullName, email, searchQuery, website, phone, favColor, dob, appointment, meetingTime, startMonth, projectWeek, age, satisfaction, interests, gender, country, browser, documents, userId, bio, submission_date FROM users";
+                        $result = $conn->query($sql);
