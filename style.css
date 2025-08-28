@@ -79,3 +79,22 @@ select:focus {
 textarea {
     resize: vertical; /* Allows the user to resize the textarea vertically */
 }
+/* --- Radio and Checkbox Options --- */
+/* These styles help align the radio buttons and checkboxes neatly. */
+.radio-options,
+.checkbox-options {
+    display: flex;
+    gap: 20px; /* Adds space between the options */
+    align-items: center;
+}
+
+.radio-options input,
+.checkbox-options input {
+    margin-right: 5px;
+}
+
+.radio-options label,
+.checkbox-options label {
+    margin-bottom: 0; /* Override the default label margin */
+    font-weight: normal; /* Make the option text normal weight */
+}
