@@ -1,4 +1,3 @@
-# simple-web-form
 Comprehensive PHP & MySQL Web Form
 This project is a complete, full-stack web application that demonstrates how to build a dynamic and secure web form. It serves as a robust template for creating data-driven websites, featuring a comprehensive front-end form, a secure PHP back-end for processing, and a MySQL database for storage.
 
