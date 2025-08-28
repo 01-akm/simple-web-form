@@ -13,7 +13,8 @@
             margin: 0;
             padding: 20px;
         }
-/* --- Main Container --- */
+
+        /* --- Main Container --- */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -28,7 +29,8 @@
             text-align: center;
             margin-bottom: 30px;
         }
-/* --- Table Styling --- */
+
+        /* --- Table Styling --- */
         .data-table {
             width: 100%;
             border-collapse: collapse; /* Removes space between table cell borders */
@@ -47,7 +49,8 @@
             color: white;
             font-weight: 600;
         }
-   .data-table tbody tr:nth-child(even) {
+
+        .data-table tbody tr:nth-child(even) {
             background-color: #f2f2f2; /* Adds a zebra-stripe effect to rows */
         }
 
