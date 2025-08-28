@@ -103,4 +103,19 @@
                 <label for="satisfaction">Satisfaction Level (range):</label>
                 <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" step="1">
             </div>
-            
+            <hr>
+            <h2>Choice Inputs</h2>
+            <hr>
+
+            <!-- 15. Checkboxes (for selecting multiple options) -->
+            <div id="checkbox-group" class="form-group">
+                <label>Interests (checkbox):</label>
+                <div class="checkbox-options">
+                    <input type="checkbox" id="coding" name="interests[]" value="coding">
+                    <label for="coding">Coding</label>
+                    <input type="checkbox" id="music" name="interests[]" value="music">
+                    <label for="music">Music</label>
+                    <input type="checkbox" id="sports" name="interests[]" value="sports">
+                    <label for="sports">Sports</label>
+                </div>
+            </div>
