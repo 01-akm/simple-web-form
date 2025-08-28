@@ -1,4 +1,4 @@
-# simple-web-form
+# Simple-web-form
 Comprehensive PHP & MySQL Web Form
 This project is a complete, full-stack web application that demonstrates how to build a dynamic and secure web form. It serves as a robust template for creating data-driven websites, featuring a comprehensive front-end form, a secure PHP back-end for processing, and a MySQL database for storage.
 
@@ -37,17 +37,17 @@ You will need a local server environment that supports PHP and MySQL. The most c
 3. Create the Database:
     * Start your local server's Apache and MySQL services.
 
-    * Open your web browser and navigate to http://localhost/phpmyadmin.
+    * Open your web browser and navigate to ```http://localhost/phpmyadmin```.
 
     * Click on the "Import" tab.
 
-    * Click "Choose File" and select the database.sql file from the project folder.
+    * Click "Choose File" and select the ```database.sql``` file from the project folder.
 
-    * Click "Go" at the bottom of the page. This will create the form_db database and the users table automatically.
+    * Click "Go" at the bottom of the page. This will create the ```form_db``` database and the ```users``` table automatically.
 
 4. Configure Database Connection:
 
-    * Open both submit.php and display.php in a code editor.
+    * Open both ```submit.php``` and ```display.php``` in a code editor.
 
     * At the top of each file, update the database credentials to match your local server's setup. For most default   XAMPP/WAMP installations, you only need to set the password (which is often blank).
 
@@ -58,24 +58,24 @@ $password = ""; // <-- Change this if you have a password
 $dbname = "form_db";
 ```
 
-You're Ready! Open your web browser and navigate to http://localhost/simple-web-form/index.php. You should now see the form and be able to use the application.
+5. You're Ready! Open your web browser and navigate to ```http://localhost/simple-web-form/index.php```. You should now see the form and be able to use the application.
 
-Challenges & Solutions
+# Challenges & Solutions
 During the development of this project, we encountered a common usability challenge:
 
-The Challenge: Initially, the phone number field used a strict HTML pattern attribute (pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}") to force users to enter dashes. This is poor practice, as users prefer to enter numbers in various formats (e.g., with spaces, parentheses, or no separators at all).
+* The Challenge: Initially, the phone number field used a strict HTML ```pattern``` attribute (```pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"```) to force users to enter dashes. This is poor practice, as users prefer to enter numbers in various formats (e.g., with spaces, parentheses, or no separators at all).
 
-The Solution: We improved the user experience by removing the restrictive pattern from the HTML. To ensure data consistency, we then implemented a server-side solution in submit.php. Using a regular expression (preg_replace('/[^0-9]/', '', $phone_raw)), the back-end now automatically strips all non-numeric characters from the phone number before saving it to the database. This approach offers the best of both worlds: a flexible front-end for the user and clean, uniform data on the back-end.
+* The Solution: We improved the user experience by removing the restrictive ```pattern``` from the HTML. To ensure data consistency, we then implemented a server-side solution in ```submit.php```. Using a regular expression (```preg_replace('/[^0-9]/', '', $phone_raw)```), the back-end now automatically strips all non-numeric characters from the phone number before saving it to the database. This approach offers the best of both worlds: a flexible front-end for the user and clean, uniform data on the back-end.
 
-Modular Usage
+## Modular Usage
 One of the key design goals of this project was to make it easily reusable. The index.php file was built with modularity in mind.
 
 Want to use just the color picker in another project? Simply copy its entire <div> block and paste it into your own form.
-
+```
 <!-- 7. Color Picker -->
 <div id="color-input-group" class="form-group">
     <label for="favColor">Favorite Color (color):</label>
     <input type="color" id="favColor" name="favColor" value="#3498db">
 </div>
-
+```
 This self-contained structure applies to every single input field, allowing you to quickly assemble custom forms by picking and choosing the components you need.
