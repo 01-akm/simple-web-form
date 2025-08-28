@@ -63,3 +63,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Hidden / Special Inputs
     $userId = $_POST['userId'] ?? '';
     $bio = $_POST['bio'] ?? '';
+    // --- 4. PASSWORD HASHING ---
+    // This is a CRITICAL security step. Never store plain text passwords.
+    // password_hash() creates a strong, secure hash of the password.
+    $password_hashed = password_hash($password_plain, PASSWORD_DEFAULT);
+
