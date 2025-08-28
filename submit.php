@@ -17,3 +17,8 @@ if ($conn->connect_error) {
     // This is crucial for debugging during development.
     die("Connection failed: " . $conn->connect_error);
 }
+
+// --- 2. FORM SUBMISSION CHECK ---
+// Check if the server request method is 'POST'.
+// This ensures that the code inside this block only runs when the form has been submitted.
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
