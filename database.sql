@@ -38,3 +38,8 @@ CREATE TABLE `users` (
 -- Numeric Inputs
     `age` INT(3) DEFAULT NULL,
     `satisfaction` INT(2) DEFAULT NULL,
+-- Choice Inputs
+    `interests` VARCHAR(255) DEFAULT NULL, -- Checkbox values will be stored as a comma-separated string.
+    `gender` VARCHAR(50) DEFAULT NULL,
+    `country` VARCHAR(100) DEFAULT NULL,
+    `browser` VARCHAR(100) DEFAULT NULL,
