@@ -18,3 +18,12 @@ CREATE TABLE `users` (
     -- `NOT NULL` means it must have a value.
     -- `AUTO_INCREMENT` means it will automatically get a new, unique number for each record.
     `id` INT(11) NOT NULL AUTO_INCREMENT,
+
+    -- Common Text-Based Inputs
+    `fullName` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
+    `password` VARCHAR(255) NOT NULL, -- IMPORTANT: Password will be stored as a secure hash (e.g., using password_hash() in PHP), NOT plain text.
+    `searchQuery` VARCHAR(255) DEFAULT NULL,
+    `website` VARCHAR(255) DEFAULT NULL,
+    `phone` VARCHAR(50) DEFAULT NULL,
+    `favColor` VARCHAR(10) DEFAULT NULL,
