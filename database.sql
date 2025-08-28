@@ -27,3 +27,10 @@ CREATE TABLE `users` (
     `website` VARCHAR(255) DEFAULT NULL,
     `phone` VARCHAR(50) DEFAULT NULL,
     `favColor` VARCHAR(10) DEFAULT NULL,
+    
+    -- Date and Time Inputs
+    `dob` DATE DEFAULT NULL,
+    `appointment` DATETIME DEFAULT NULL,
+    `meetingTime` TIME DEFAULT NULL,
+    `startMonth` VARCHAR(7) DEFAULT NULL, -- Stored as 'YYYY-MM'
+    `projectWeek` VARCHAR(8) DEFAULT NULL, -- Stored as 'YYYY-W##'
