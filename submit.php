@@ -33,4 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password_plain = $_POST['password'] ?? ''; // We get the plain text password first.
     $searchQuery = $_POST['searchQuery'] ?? '';
     $website = $_POST['website'] ?? '';
-    
+     // Get the raw phone number input from the form.
+    $phone_raw = $_POST['phone'] ?? '';
+    // **NEW:** Sanitize the phone number by removing all non-numeric characters.
+    // preg_replace('/[^0-9]/', '', $phone_raw) finds anything that is NOT a digit and replaces it with nothing.
+    $phone = preg_replace('/[^0-9]/', '', $phone_raw);
+
+    $favColor = $_POST['favColor'] ?? '';
