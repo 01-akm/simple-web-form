@@ -98,3 +98,16 @@ textarea {
     margin-bottom: 0; /* Override the default label margin */
     font-weight: normal; /* Make the option text normal weight */
 }
+/* --- Submit Button --- */
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db; /* A nice blue background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for the hover effect */
+}
